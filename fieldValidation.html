@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email" id="email">
+        </p>
+        <p>
+            <label for="username">Username</label>
+            <br>
+            <input type="username" name="username" id="username" pattern="[A-Za-z0-9]{4,12}"
+            title="Use only letters, numbers between 4-12 characters" required>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" name="password" id="password" minlength="8" required>
+        </p>
+        <button type="submit">Just send it</button>
+    </form>
+    <script>
+        const usernameInput = document.querySelector('#username')
+        const passwordInput = document.querySelector('#password')
+
+        form.addEventListener("submit", (e) => {
+            passwordInput.addEventListener('change', (e) => {
+                if (passwordInput.value.includes(usernameInput)) {
+                    passwordInput.setCustomValidity("Don't include username in password");
+                } else {
+                    passwordInput.setCustomValidity('');
+                }
+            })
+        })
+    </script>
+
+</body>
+</html>

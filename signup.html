@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+</head>
+<body>
+    <form>
+        <p>
+            <label for="name">Name</label>
+            <br>
+            <input type="text" name="name" id="name" minlength="5" required>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <br>
+            <input type="password" name="password" id="password" minlength="6" maxlength="15" required>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email" id="email" required>
+        </p>
+        <p>
+            <label for="aboutMe">About Me</label>
+            <br>
+            <textarea name="aboutMe" id="aboutMe" cols="20" rows="3" maxlength="250" placeholder="what're ya gonna do, type about it?"></textarea>
+        </p>
+        <p>
+            <label for="robotCheck">Please type: <strong>I am a human</strong></label>
+            <br>
+            <input type="text" name="robotCheck" id="robotCheck" pattern="I am a human">
+        </p>
+        <button type="submit">full send</button>
+    </form>
+</body>
+</html>
